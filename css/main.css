@@ -1,0 +1,224 @@
+.center-con {
+    display: flex;
+    position: absolute;
+    bottom: 140px;
+    right: 100px;
+}
+
+.round
+{
+    position: absolute;
+    border: 2px solid #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+#cta
+{
+    width:100%; cursor: pointer; position: absolute;
+}
+
+#cta .arrow{left: 30%;}
+.arrow {position: absolute; margin-top: -2px;  margin-left: 2px; width: 12px; height: 12px; background-size: contain; top:15px;}
+.second{ margin-top: 6px;}
+.next {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9IiB0cmFuc2Zvcm06IHJvdGF0ZSg5MGRlZyk7Ij48c3R5bGU+LnN0MHtmaWxsOiNmZmZ9PC9zdHlsZT48cGF0aCBkPSJNMzE5LjEgMjE3YzIwLjIgMjAuMiAxOS45IDUzLjItLjYgNzMuN3MtNTMuNSAyMC44LTczLjcuNmwtMTkwLTE5MGMtMjAuMS0yMC4yLTE5LjgtNTMuMi43LTczLjdTMTA5IDYuOCAxMjkuMSAyN2wxOTAgMTkweiIgY2xhc3M9InN0MCI+PC9wYXRoPjxwYXRoIGQ9Ik0zMTkuMSAyOTAuNWMyMC4yLTIwLjIgMTkuOS01My4yLS42LTczLjdzLTUzLjUtMjAuOC03My43LS42bC0xOTAgMTkwYy0yMC4yIDIwLjItMTkuOSA1My4yLjYgNzMuN3M1My41IDIwLjggNzMuNy42bDE5MC0xOTB6IiBjbGFzcz0ic3QwIj48L3BhdGg+PC9zdmc+);
+}
+
+@keyframes bounceAlpha {
+  0% {opacity: 1; transform: translateY(0px) scale(1);}
+  25%{opacity: 0; transform: translateY(10px) scale(0.9);}
+  26%{opacity: 0; transform: translateY(-10px) scale(0.9);}
+  55% {opacity: 1; transform: translateY(0px) scale(1);}
+}
+
+.bounceAlpha {
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+.arrow.first.bounceAlpha {
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-delay:0.2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+
+.round:hover .arrow{
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+.round:hover .arrow.first{
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-delay:0.2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+.topnav 
+{
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10; /* Make sure that the navbar is always in front */
+}
+
+.topnav a
+{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+
+.topnav a.active
+{
+    background-color: #4CAF50;
+    color: white;
+}
+
+.topnav a:hover
+{
+    background-color: #ddd;
+    color: black;
+}
+
+.top-gradient
+{
+    transform: translateY(100%);
+    padding-top: 50px;
+    background: url("../images/gradient.png") center repeat-x;
+    background-size: 100px;
+    z-index: 9;
+}
+
+.main-background
+{
+    /* The image used */
+    background-image: url("../images/cabbage.jpg");
+  
+    /* Set a specific height */
+    min-height: 130vh; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+
+
+.centered-text
+{
+    font-size: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(50, 50, 50); /* Fallback for trash browsers */
+    background: rgba(50, 50, 50, 0.9);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.transition-waves-top
+{
+    height: 50%;
+    width: 100%;
+    top: 90%;
+    position: absolute;
+    z-index: 8;
+}
+
+#transition-box
+{
+    width: 100%;
+    top: 20%;
+    position: absolute;
+}
+
+#text-box
+{
+    font-size: 80px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    left: 40%;
+    top: 20%;
+    position: absolute;
+}
+
+#first-stroke,
+#second-stroke,
+#third-stroke
+{
+    width: 100%;
+    position: absolute;
+}
+
+#fourth-stroke,
+#fifth-stroke,
+#sixth-stroke
+{
+    width: 100%;
+    position: absolute;
+}
+
+
+
+
+
+
+ul.cabbage-list
+{
+    list-style-image: url('../images/cabbage-bullet.jpg');
+}
+
+
+
+
+.grid-container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(200px, auto);
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    transition: all 0.5s ease;
+  }
