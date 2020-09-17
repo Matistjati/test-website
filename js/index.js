@@ -35,6 +35,12 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     )*/
 
+    var toggle = document.getElementById("clickable-hamburger");
+
+    toggle.onclick = function(e)
+    {
+        console.log("Hi")
+    }
     
 
     circle = document.getElementById("clickable-circle");
@@ -44,9 +50,13 @@ document.addEventListener("DOMContentLoaded", function(){
         //$('.arrow').toggleClass('bounceAlpha');
         var topnav = document.getElementById("topnav");
         var element = document.getElementById("text-box");
-        const y = element.getBoundingClientRect().top + window.pageYOffset - topnav.clientHeight - (window.innerHeight / 3);
+        const y = element.getBoundingClientRect().top + window.pageYOffset - topnav.clientHeight - (window.innerHeight / 4);
 
         window.scrollTo({top: y, behavior: 'smooth'});
         
     });
 });
+
+
+
+
