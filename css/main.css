@@ -169,6 +169,21 @@ body
 }
 
 
+@keyframes fade-in
+{
+    from {opacity: 0; transform: translateX(-20vw)}
+    to {opacity: 1;}
+}
+
+.fade-in-element
+{
+    animation: fade-in 1.4s;
+}
+
+.hidden 
+{
+    opacity: 0;
+}
 
 .centered-text
 {
@@ -206,12 +221,20 @@ body
 
 #text-box
 {
+    animation: fade-in 1.4s;
     font-size: 80px;
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
-    left: 40%;
-    top: 20%;
-    position: absolute;
+    position: relative;
+    top: 10vh;
+}
+
+.frukost
+{
+    text-align: center;
+    top: 5vh;
+    left: 500px;
+    position: relative;
 }
 
 #first-stroke,
@@ -246,7 +269,7 @@ ul.cabbage-list
 .grid-container
 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(200px, auto);
 }

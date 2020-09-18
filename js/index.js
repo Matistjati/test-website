@@ -50,11 +50,41 @@ document.addEventListener("DOMContentLoaded", function(){
         //$('.arrow').toggleClass('bounceAlpha');
         var topnav = document.getElementById("topnav");
         var element = document.getElementById("text-box");
-        const y = element.getBoundingClientRect().top + window.pageYOffset - topnav.clientHeight - (window.innerHeight / 4);
+        const y = element.getBoundingClientRect().top + window.pageYOffset - topnav.clientHeight - (window.innerHeight / 3);
 
         window.scrollTo({top: y, behavior: 'smooth'});
         
     });
+
+    var elements;
+    var windowHeight;
+    
+    function init() {
+        elements = document.querySelectorAll('.hidden');
+        windowHeight = window.innerHeight;
+    }
+    
+    function checkPosition() {
+        for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+        var positionFromTop = elements[i].getBoundingClientRect().top + 200;
+    
+        if (positionFromTop - windowHeight <= 0) {
+            element.classList.add('fade-in-element');
+            element.classList.remove('hidden');
+        }
+        else if (positionFromTop - windowHeight >= 0) {
+            element.classList.remove('fade-in-element');
+            element.classList.add('hidden');
+        }
+        }
+    }
+    
+    window.addEventListener('scroll', checkPosition);
+    window.addEventListener('resize', init);
+    
+    init();
+    checkPosition();
 });
 
 
