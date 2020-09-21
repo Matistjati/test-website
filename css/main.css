@@ -146,7 +146,7 @@ body
 .top-gradient
 {
     transform: translateY(100%);
-    padding-top: 50px;
+    padding-top: 48px;
     background: url("../images/gradient.png") center repeat-x;
     background-size: 100px;
     z-index: 9;
@@ -229,14 +229,6 @@ body
     top: 10vh;
 }
 
-.frukost
-{
-    text-align: center;
-    top: 5vh;
-    left: 500px;
-    position: relative;
-}
-
 #first-stroke,
 #second-stroke,
 #third-stroke
@@ -253,31 +245,135 @@ body
     position: absolute;
 }
 
-
-
-
-
-
-ul.cabbage-list
+.item-a
 {
-    list-style-image: url('../images/cabbage-bullet.jpg');
+    grid-area: header;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+
+
+
 }
 
 
+.item-b
+{
+    font-size: 50;
+    grid-area: main;
+}
 
+.item-c
+{
+    grid-area: footer;
+}
 
-.grid-container
+.container
 {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(200px, auto);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header header"
+    ". main main main"
+    "footer main main main";
 }
 
-.grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    font-size: 30px;
+
+
+.grid-wrapper {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+
+    grid-template-areas: 
+        "he he he he he"
+        "na na na na as"
+        "a1 a1 a1 a1 as"
+        "a2 a2 a3 a3 as"
+        "a4 a5 se a6 as"
+        "a7 a7 a7 a7 as"
+        "a8 a8 a8 a8 as"
+        "fo fo fo fo fo";
+
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-gap: 2px;
+}
+
+.header {
+    grid-area: he;
     text-align: center;
-    transition: all 0.5s ease;
-  }
+    font-size: 20px;
+}
+
+.nav {
+    grid-area: na;
+    background: salmon;
+}
+
+.article1 {
+    grid-area: a1;
+    background: green;
+}
+
+.article2 {
+    grid-area: a2;
+    background: lightseagreen;
+}
+
+.article3 {
+    grid-area: a3;
+    background: pink;
+}
+
+.article4 {
+    grid-area: a4;
+    background: lightseagreen;
+}
+
+.article5 {
+    grid-area: a5;
+    background: lightgray;
+}
+
+.article6 {
+    grid-area: a6;
+    background: purple;
+}
+
+.article7 {
+    grid-area: a7;
+    background: lightblue;
+}
+
+.article8 {
+    grid-area: a8;
+    background: red;
+}
+
+.inner-grid-wrapper {
+    grid-area: se;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2px;
+}
+
+.innerdiv {
+    background: green;
+}
+
+.aside {
+    grid-area: as;
+    background: orange;
+}
+
+.footer {
+    grid-area: fo;
+    background: purple;
+}
+
+h5 {
+    font-family: "sans-serif";
+}
