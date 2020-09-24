@@ -222,11 +222,11 @@ body
 #text-box
 {
     animation: fade-in 1.4s;
-    font-size: 80px;
+    font-size: 5vh;
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
     position: relative;
-    top: 10vh;
+    top: 15vh;
 }
 
 #first-stroke,
@@ -245,54 +245,19 @@ body
     position: absolute;
 }
 
-.item-a
-{
-    grid-area: header;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 90px;
-
-
-
-}
-
-
-.item-b
-{
-    font-size: 50;
-    grid-area: main;
-}
-
-.item-c
-{
-    grid-area: footer;
-}
-
-.container
-{
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "header header header header"
-    ". main main main"
-    "footer main main main";
-}
-
-
-
 .grid-wrapper {
     display: grid;
-    width: 100vw;
+    width: 99.14vw;
     height: 100vh;
 
     grid-template-areas: 
         "he he he he he"
-        "na na na na as"
-        "a1 a1 a1 a1 as"
-        "a2 a2 a3 a3 as"
-        "a4 a5 se a6 as"
-        "a7 a7 a7 a7 as"
-        "a8 a8 a8 a8 as"
+        "na na a3 a3 a3"
+        "a2 a2 a3 a3 a3"
+        "a2 a2 a3 a3 a3"
+        "a2 a2 a3 a3 a3"
+        "a2 a2 a3 a3 a3"
+        "a2 a2 a3 a3 a3"
         "fo fo fo fo fo";
 
         grid-template-columns: repeat(5, 1fr);
@@ -301,6 +266,7 @@ body
 }
 
 .header {
+    padding-top: 15vh;
     grid-area: he;
     text-align: center;
     font-size: 20px;
@@ -311,11 +277,6 @@ body
     background: salmon;
 }
 
-.article1 {
-    grid-area: a1;
-    background: green;
-}
-
 .article2 {
     grid-area: a2;
     background: lightseagreen;
@@ -323,51 +284,10 @@ body
 
 .article3 {
     grid-area: a3;
+    font-size: 15px;
     background: pink;
 }
 
-.article4 {
-    grid-area: a4;
-    background: lightseagreen;
-}
-
-.article5 {
-    grid-area: a5;
-    background: lightgray;
-}
-
-.article6 {
-    grid-area: a6;
-    background: purple;
-}
-
-.article7 {
-    grid-area: a7;
-    background: lightblue;
-}
-
-.article8 {
-    grid-area: a8;
-    background: red;
-}
-
-.inner-grid-wrapper {
-    grid-area: se;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 2px;
-}
-
-.innerdiv {
-    background: green;
-}
-
-.aside {
-    grid-area: as;
-    background: orange;
-}
 
 .footer {
     grid-area: fo;

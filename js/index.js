@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function(){
     function checkPosition() {
         for (var i = 0; i < elements.length; i++) {
         var element = elements[i];
-        var positionFromTop = elements[i].getBoundingClientRect().top + 200;
+        var positionFromTop = elements[i].getBoundingClientRect().top + 300;
     
         if (positionFromTop - windowHeight <= 0) {
             element.classList.add('fade-in-element');
